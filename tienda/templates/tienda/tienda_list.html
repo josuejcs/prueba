@@ -1,0 +1,12 @@
+    {% extends 'tienda/base.html' %}
+
+    {% block content %}
+        {% for tienda in tiendas %}
+            <div class="tienda">
+                <div class="nombre">
+                    {{ tienda.nombre }}
+                </div>
+                <p>{{ tienda.descr|linebreaks }}</p>
+            </div>
+        {% endfor %}
+    {% endblock content %}
